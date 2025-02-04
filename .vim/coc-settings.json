@@ -1,0 +1,44 @@
+{
+  "coc.preferences": {
+    "documentHighlight.priority": -11
+  },
+  "languageserver": {
+    "typescript": {
+      "command": "typescript-language-server",
+      "args": ["--stdio"],
+      "filetypes": [
+        "typescript",
+        "typescriptreact",
+        "typescript.tsx",
+        "javascript",
+        "javascriptreact",
+        "javascript.jsx"
+      ]
+    },
+    "csharp": {
+        "command": "/usr/local/Cellar/omnisharp/1.35.3/libexec/omnisharp",
+      "args": ["--languageserver"],
+      "rootPatterns": ["*.sln", "*.csproj"],
+      "filetypes": ["cs"],
+      "initializationOptions": {}
+    },
+    "python": {
+      "command": "pyright-langserver",
+      "args": ["--stdio"],
+      "filetypes": ["python"]
+    }
+  },
+  "prettier": {
+    "disableLanguages": [],
+    "useTabs": false,
+    "tabWidth": 2,
+    "singleQuote": true
+  },
+  "python.formatting": {
+    "provider": "black",
+    "blackArgs": ["--line-length", "88"]
+  },
+  "csharp.format": {
+    "enable": true
+  }
+}
