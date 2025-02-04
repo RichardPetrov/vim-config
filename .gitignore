@@ -1,0 +1,29 @@
+# Vim plugin directory (managed by vim-plug)
+.vim/plugged/
+
+# Vim swap files
+*.swp
+*.swo
+.*.sw*
+
+# Vim undo directory
+.vim/undo/
+
+# Vim backup files
+*~
+.*.un~
+
+# Vim view files
+.vim/view/
+
+# Local Vim temporary files
+.netrwhist
+
+# macOS system files
+.DS_Store
+
+# Node modules (for coc.nvim)
+node_modules/
+
+# ChatGPT API key file
+.config/nvim/chatgpt_api_key 
