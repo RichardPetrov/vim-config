@@ -23,6 +23,9 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+" File explorer
+Plug 'preservim/nerdtree'
+
 " Syntax highlighting for JavaScript, JSX, HTML, and C#
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
