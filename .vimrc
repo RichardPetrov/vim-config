@@ -107,6 +107,14 @@ let g:rooter_patterns = ['.git', 'package.json', '*.sln', 'Makefile']
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
 let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --margin=1,4"
 
+" FZF key mappings
+nnoremap <C-p> :Files<CR>
+nnoremap <leader>sf :Rg<CR>
+nnoremap <leader>sb :Buffers<CR>
+nnoremap <leader>sh :History<CR>
+nnoremap <leader>st :BTags<CR>
+nnoremap <leader>sl :Lines<CR>
+
 " Additional key mappings
 " Git
 nmap <leader>gs :Git<CR>
@@ -126,7 +134,8 @@ nmap <leader>F  <Plug>(coc-format)
 " Custom filter for NERDTree to ignore Unity meta files
 let NERDTreeIgnore = ['\.meta$', '\. unity$', '\.DS_Store']
 
-source ~/.vim/plugged/vim-colors-modus/colors/modus.vim
+" source ~/.vim/plugged/vim-colors-modus/colors/modus.vim
+colorscheme xcode
 set background=light
 
 " CoC Configuration

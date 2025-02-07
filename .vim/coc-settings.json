@@ -1,8 +1,15 @@
 {
-  "coc.preferences": {
-    "documentHighlight.priority": -11
-  },
   "languageserver": {
+    "csharp": {
+      "command": "dotnet",
+      "args": [
+        "/usr/local/Cellar/omnisharp/1.35.3/libexec/omnisharp/OmniSharp.exe",
+        "--languageserver"
+      ],
+      "rootPatterns": ["*.sln", "*.csproj"],
+      "filetypes": ["cs"],
+      "initializationOptions": {}
+    },
     "typescript": {
       "command": "typescript-language-server",
       "args": ["--stdio"],
@@ -15,18 +22,14 @@
         "javascript.jsx"
       ]
     },
-    "csharp": {
-        "command": "/usr/local/Cellar/omnisharp/1.35.3/libexec/omnisharp",
-      "args": ["--languageserver"],
-      "rootPatterns": ["*.sln", "*.csproj"],
-      "filetypes": ["cs"],
-      "initializationOptions": {}
-    },
     "python": {
       "command": "pyright-langserver",
       "args": ["--stdio"],
       "filetypes": ["python"]
     }
+  },
+  "coc.preferences": {
+    "documentHighlight.priority": -11
   },
   "prettier": {
     "disableLanguages": [],
