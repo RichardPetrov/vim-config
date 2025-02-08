@@ -8,7 +8,11 @@
       ],
       "rootPatterns": ["*.sln", "*.csproj"],
       "filetypes": ["cs"],
-      "initializationOptions": {}
+      "initializationOptions": {
+        "omnisharp": {
+          "useModernNet": true
+        }
+      }
     },
     "typescript": {
       "command": "typescript-language-server",
