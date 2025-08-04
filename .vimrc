@@ -37,6 +37,9 @@ Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" VS Code theme support - using a more standard plugin
+Plug 'tomasiser/vim-code-dark'
+
 " Git integration
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -135,8 +138,22 @@ nmap <leader>F  <Plug>(coc-format)
 let NERDTreeIgnore = ['\.meta$', '\. unity$', '\.DS_Store']
 
 " source ~/.vim/plugged/vim-colors-modus/colors/modus.vim
-colorscheme xcode
+
+" Enable true color support before loading colorscheme
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
+" Set light background before loading colorscheme
 set background=light
+
+" Bearded Coffee Cream theme settings
+let g:airline_theme = 'papercolor'  " Light theme that works well with coffee colors
+
+" Direct loading of colorscheme file (avoids file not found issues)
+source ~/Documents/Development/Active/vim-config/bearded-coffee-cream-fixed.vim
 
 " CoC Configuration
 let g:coc_start_at_startup = 1
@@ -203,6 +220,9 @@ set clipboard=unnamed
 
 " If you're using mouse mode, make sure it's enabled properly
 set mouse=a
+
+" Mouse support is already enabled at the top of the file
+" True color support is now handled before loading the colorscheme
 
 " Add ChatGPT configuration
 let g:chatgpt_api_key_path = expand('~/.config/nvim/chatgpt_api_key')
